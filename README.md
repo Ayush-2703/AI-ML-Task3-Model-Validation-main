@@ -2,13 +2,13 @@
 Machine Learning project using the California Housing Dataset. Implemented feature scaling, Linear Regression, Ridge Regression, Decision Tree Regression, Cross Validation, Overfitting Analysis, and Hyperparameter Tuning using GridSearchCV.
 
 <p align="center">
-
 # 🏠 House Price Prediction using Machine Learning
 ### Model Validation, Overfitting Control & Hyperparameter Tuning
 
 ![Python](https://img.shields.io/badge/Python-3.10+-blue)
 ![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-ML-orange)
 ![Status](https://img.shields.io/badge/Project-Completed-brightgreen)
+</p>
 
 ## 📌 Project Overview
 
@@ -264,15 +264,12 @@ and run all cells.
 ---
 
 ## 👨‍💻 Author
-<div align"center">
- 
+<p align"center">
 **Ayush Kumar Singh**
-
 B.Tech Artificial Intelligence  
 Amity University Lucknow
-
 [GitHub](https://github.com/Ayush-2703) [LinkedIn](https://www.linkedin.com/in/ayushsingh2703)
-
+</p>
 ---
 
 ## ⭐ Acknowledgements
