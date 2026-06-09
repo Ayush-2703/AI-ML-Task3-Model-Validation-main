@@ -1,234 +1,247 @@
-# AI-ML-Task3-Model-Validation
-Machine Learning project using the California Housing Dataset. Implemented feature scaling, Linear Regression, Ridge Regression, Decision Tree Regression, Cross Validation, Overfitting Analysis, and Hyperparameter Tuning using GridSearchCV.
+<div align="center">
 
-<p align="center">
 # 🏠 House Price Prediction using Machine Learning
-### Model Validation, Overfitting Control & Hyperparameter Tuning 
-</p>
 
-<p align="center"> 
- 
-![Python](https://img.shields.io/badge/Python-3.10+-blue)
-![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-ML-orange)
-![Status](https://img.shields.io/badge/Project-Completed-brightgreen)
+### Model Validation &nbsp;•&nbsp; Overfitting Control &nbsp;•&nbsp; Hyperparameter Tuning
 
-</p>
+<br>
+
+![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-ML-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
+![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Completed-2ea44f?style=for-the-badge)
+
+</div>
+
+---
 
 ## 📌 Project Overview
 
-This project focuses on predicting California house prices using Machine Learning regression models. The objective was not only to achieve good prediction accuracy but also to evaluate model reliability through cross-validation, detect overfitting, and optimize model performance using hyperparameter tuning.
+This project focuses on predicting **California house prices** using Machine Learning regression models. The objective was not only to achieve good prediction accuracy but also to evaluate model reliability through **cross-validation**, detect **overfitting**, and optimize model performance using **hyperparameter tuning**.
 
-The California Housing Dataset from Scikit-Learn was used for this project.
+> 🗂️ **Dataset Used:** California Housing Dataset from Scikit-Learn  
+> 🎯 **Target Variable:** Median House Value
 
 ---
 
 ## 🎯 Objectives
 
-- Load and preprocess housing data
-- Apply feature scaling using StandardScaler
-- Train multiple regression models
-- Detect overfitting using train vs test performance
-- Validate model performance using Cross Validation
-- Optimize Decision Tree using GridSearchCV
-- Compare models using RMSE and R² Score
-- Select the best-performing model
+- 📥 Load and preprocess housing data  
+- ⚖️ Apply feature scaling using `StandardScaler`  
+- 🤖 Train multiple regression models  
+- 🔍 Detect overfitting using train vs test performance  
+- 🔄 Validate model performance using Cross Validation  
+- 🔧 Optimize Decision Tree using `GridSearchCV`  
+- 📊 Compare models using RMSE and R² Score  
+- 🏆 Select the best-performing model  
 
 ---
 
-## 🛠 Technologies Used
+## 🛠️ Technologies Used
 
-- Python
-- Jupyter Notebook
-- NumPy
-- Pandas
-- Matplotlib
-- Scikit-Learn
+<div align="center">
+
+| Technology | Purpose |
+|:----------:|:-------:|
+| 🐍 Python | Core Language |
+| 📓 Jupyter Notebook | Development Environment |
+| 🔢 NumPy | Numerical Computing |
+| 🐼 Pandas | Data Manipulation |
+| 📊 Matplotlib | Data Visualization |
+| 🤖 Scikit-Learn | Machine Learning |
+
+</div>
 
 ---
 
 ## 📊 Dataset
 
-**Dataset:** California Housing Dataset
+**Dataset:** California Housing Dataset &nbsp;&nbsp;|&nbsp;&nbsp; **Target Variable:** Median House Value
 
-**Target Variable:** Median House Value
+### 🔑 Feature Description
 
-### Features
-
-- MedInc
-- HouseAge
-- AveRooms
-- AveBedrms
-- Population
-- AveOccup
-- Latitude
-- Longitude
+| Feature | Description |
+|---------|-------------|
+| `MedInc` | Median income in block group |
+| `HouseAge` | Median house age in block group |
+| `AveRooms` | Average number of rooms per household |
+| `AveBedrms` | Average number of bedrooms per household |
+| `Population` | Block group population |
+| `AveOccup` | Average number of household members |
+| `Latitude` | Block group latitude |
+| `Longitude` | Block group longitude |
 
 ---
 
 ## ⚙️ Machine Learning Workflow
 
-### 1. Data Preprocessing
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                                                                 │
+│   📥 Data Preprocessing                                        │
+│      └── Feature Selection → StandardScaler → Train-Test Split  │
+│                                                                 │
+│   📈 Baseline Models                                           │
+│      └── Linear Regression → Ridge Regression                   │
+│                                                                 │
+│   🔍 Overfitting Analysis                                      │
+│      └── Decision Tree → Train RMSE vs Test RMSE                │
+│                                                                 │
+│   🔄 Cross Validation                                          │
+│      └── 5-Fold Cross Validation → Reliable Evaluation          │
+│                                                                 │
+│   🔧 Hyperparameter Tuning                                     │
+│      └── GridSearchCV → Best Decision Tree                      │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘
+```
 
-- Feature Selection
-- StandardScaler Normalization
-- Train-Test Split (80:20)
+### 1️⃣ Data Preprocessing
+- Feature selection from raw dataset
+- Normalization using `StandardScaler`
+- Train-Test Split with **80:20** ratio
 
-### 2. Baseline Models
+### 2️⃣ Baseline Models
+- **Linear Regression** — simple benchmark model
+- **Ridge Regression** — adds L2 regularization to reduce variance
 
-- Linear Regression
-- Ridge Regression
+### 3️⃣ Overfitting Analysis
+- **Decision Tree Regressor** trained without constraints
+- Compared **Train RMSE** vs **Test RMSE** to detect overfitting
 
-### 3. Overfitting Analysis
+### 4️⃣ Cross Validation
+- **5-Fold Cross Validation** for stable, unbiased evaluation
+- Reduces sensitivity to train-test split randomness
 
-- Decision Tree Regressor
-- Train RMSE vs Test RMSE Comparison
-
-### 4. Cross Validation
-
-- 5-Fold Cross Validation
-- Reliable Model Evaluation
-
-### 5. Hyperparameter Tuning
-
-- GridSearchCV
-- Decision Tree Optimization
+### 5️⃣ Hyperparameter Tuning
+- `GridSearchCV` to find the optimal Decision Tree parameters
+- Balanced model complexity and generalization
 
 ---
 
 ## 🔍 Overfitting Detection
 
-### Initial Decision Tree Performance
+### ⚠️ Initial Decision Tree — Before Tuning
 
-| Metric | Value |
-|----------|----------|
-| Train RMSE | 3.218e-16 |
-| Test RMSE | 0.7030 |
+<div align="center">
 
-### Observation
+| Metric | Value | Observation |
+|:------:|:-----:|:-----------:|
+| Train RMSE | `3.218e-16` | Nearly Zero → Memorized Training Data |
+| Test RMSE | `0.7030` | High → Poor Generalization |
 
-The training RMSE was nearly zero while the testing RMSE was significantly higher.
+</div>
 
-This indicates severe overfitting because the model memorized the training data but did not generalize well to unseen data.
+> ❗ **Conclusion:** The near-zero training RMSE alongside a significantly higher test RMSE confirms **severe overfitting** — the model memorized training data but failed to generalize to unseen samples.
 
 ---
 
 ## 📈 Cross Validation Results
 
-5-Fold Cross Validation Scores:
+**5-Fold Cross Validation Scores:**
 
-```text
-[-0.78796899
- -0.68527964
- -0.80721441
- -0.89315807
- -0.84548406]
+```
+Fold 1:  -0.78796899
+Fold 2:  -0.68527964
+Fold 3:  -0.80721441
+Fold 4:  -0.89315807
+Fold 5:  -0.84548406
 ```
 
-### Conclusion
-
-The scores were relatively consistent across folds, indicating stable model performance.
+> ✅ **Conclusion:** Scores are relatively consistent across all folds, indicating **stable and reliable model performance**.
 
 ---
 
 ## 🔧 Hyperparameter Tuning
 
-### Parameter Grid
+### Parameter Grid Used
 
 ```python
 param_grid = {
-    "max_depth": [3, 5, 7, 10],
+    "max_depth":        [3, 5, 7, 10],
     "min_samples_split": [2, 5, 10]
 }
 ```
 
-### Best Parameters
+### ✅ Best Parameters Found
 
 ```python
 {
-    'max_depth': 10,
-    'min_samples_split': 10
+    "max_depth":         10,
+    "min_samples_split": 10
 }
 ```
 
-These parameters reduced overfitting and improved generalization.
+> These parameters **reduced overfitting** and significantly improved generalization on unseen data.
 
 ---
 
 ## 📊 Model Performance Comparison
 
-| Model | RMSE | R² Score |
-|---------|---------|---------|
-| Linear Regression | 0.745581 | 0.575788 |
-| Ridge Regression | 0.745554 | 0.575819 |
-| Tuned Decision Tree | **0.645430** | **0.682099** |
+<div align="center">
+
+| Model | RMSE | R² Score | Verdict |
+|:-----:|:----:|:--------:|:-------:|
+| Linear Regression | 0.745581 | 0.575788 | Baseline |
+| Ridge Regression | 0.745554 | 0.575819 | Marginal Improvement |
+| ⭐ Tuned Decision Tree | **0.645430** | **0.682099** | **Best Model** |
+
+</div>
 
 ---
 
-## 🏆 Best Model
+## 🏆 Best Model — Tuned Decision Tree Regressor
 
-### Tuned Decision Tree Regressor
+<div align="center">
 
-**Performance**
+| Metric | Value |
+|:------:|:-----:|
+| 📉 RMSE | **0.645430** |
+| 📈 R² Score | **0.682099** |
 
-- RMSE = 0.645430
-- R² Score = 0.682099
+</div>
 
 ### Why It Was Selected
 
-✅ Lowest RMSE
-
-✅ Highest R² Score
-
-✅ Reduced Overfitting
-
-✅ Better Generalization
-
-✅ Stable Cross Validation Performance
+| ✅ Criterion | Detail |
+|-------------|--------|
+| 📉 Lowest RMSE | Outperformed all other models |
+| 📈 Highest R² Score | Explains ~68% of target variance |
+| 🛡️ Reduced Overfitting | Controlled via `max_depth` and `min_samples_split` |
+| 🌐 Better Generalization | Strong performance on unseen test data |
+| 🔄 Stable Cross Validation | Consistent scores across all 5 folds |
 
 ---
 
-## 📷 Results
+## 📷 Results & Visualizations
 
-### RMSE Comparison
+### 📉 RMSE Comparison
+![RMSE Comparison](images/rmse_comparison.png)
 
-Add your chart here:
+### 🔍 Overfitting Analysis
+![Overfitting Analysis](images/overfitting_analysis.png)
 
-```text
-images/rmse_comparison.png
-```
-
-### Overfitting Analysis
-
-Add screenshot:
-
-```text
-images/overfitting_analysis.png
-```
-
-### Cross Validation
-
-Add screenshot:
-
-```text
-images/cross_validation_results.png
-```
+### 🔄 Cross Validation Results
+![Cross Validation](images/cross_validation_results.png)
 
 ---
 
 ## 📂 Project Structure
 
-```text
-House-Price-Prediction-Model-Validation
+```
+House-Price-Prediction-Model-Validation/
 │
-├── AI_ML_Task3_Model_Validation_Tuning.ipynb
-├── Task3_Report.pdf
-├── README.md
-├── requirements.txt
+├── 📓 AI_ML_Task3_Model_Validation_Tuning.ipynb   ← Main Notebook
+├── 📄 Task3_Report.pdf                            ← Project Report
+├── 📝 README.md                                   ← Documentation
+├── 📦 requirements.txt                            ← Dependencies
 │
-└── images
-    ├── rmse_comparison.png
-    ├── overfitting_analysis.png
-    └── cross_validation_results.png
+└── 📁 images/
+    ├── 📊 rmse_comparison.png
+    ├── 🔍 overfitting_analysis.png
+    └── 🔄 cross_validation_results.png
 ```
 
 ---
@@ -236,49 +249,61 @@ House-Price-Prediction-Model-Validation
 ## 🚀 How to Run
 
 ```bash
+# 1. Clone the repository
 git clone https://github.com/00-Abhishek/House-Price-Prediction-Model-Validation.git
 
+# 2. Navigate into the project directory
 cd House-Price-Prediction-Model-Validation
 
+# 3. Install required dependencies
 pip install -r requirements.txt
 
+# 4. Launch Jupyter Notebook
 jupyter notebook
 ```
 
-Open:
-
-```text
-AI_ML_Task3_Model_Validation_Tuning.ipynb
-```
-
-and run all cells.
+Then open **`AI_ML_Task3_Model_Validation_Tuning.ipynb`** and run all cells.
 
 ---
 
 ## 📚 Learning Outcomes
 
-- Understanding Overfitting and Underfitting
-- Model Validation Techniques
-- Cross Validation
-- Hyperparameter Tuning
-- GridSearchCV
-- Regression Evaluation Metrics
-- Model Selection Strategies
+| Concept | What Was Learned |
+|---------|-----------------|
+| 🔍 Overfitting & Underfitting | Identifying model behavior via train/test gap |
+| 🔄 Cross Validation | Reliable evaluation beyond a single split |
+| 🔧 Hyperparameter Tuning | Systematic search using `GridSearchCV` |
+| 📊 Evaluation Metrics | RMSE and R² for regression tasks |
+| 🤖 Model Selection | Choosing the best model based on evidence |
 
 ---
 
 ## 👨‍💻 Author
-<p align"center">
-**Ayush Kumar Singh**
 
- B.Tech Artificial Intelligence  
-Amity University Lucknow
-[GitHub](https://github.com/Ayush-2703) [LinkedIn](https://www.linkedin.com/in/ayushsingh2703)
-</p>
+<div align="center">
+
+### Ayush Kumar Singh
+
+**B.Tech — Artificial Intelligence**  
+Amity University, Lucknow
+
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Ayush-2703)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ayushsingh2703)
+
+</div>
+
 ---
 
 ## ⭐ Acknowledgements
 
-- Scikit-Learn Documentation
-- California Housing Dataset
-- Maincrafts Technology AI & ML Internship Program
+- 📘 [Scikit-Learn Documentation](https://scikit-learn.org/)
+- 🗂️ California Housing Dataset
+- 🏢 **Maincrafts Technology** — AI & ML Internship Program
+
+---
+
+<div align="center">
+
+*If you found this project helpful, consider giving it a ⭐ on GitHub!*
+
+</div>
